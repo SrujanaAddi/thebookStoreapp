@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h3>Books list</h3><hr>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="table-primary">
+                            <th>Book Id</th>
+                            <th>Book Name</th>
+                            <th>Book Author</th>
+                            <th>Publisher</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of bookList">
+                            <td>{{item?.bookId}}</td>
+                            <td>{{item?.bookName}}</td>
+                            <td>{{item?.bookAuthor}}</td>
+                            <td>{{item?.publisher}}</td>
+                            <td>{{item?.price | currency : "INR" : "symbol"}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
